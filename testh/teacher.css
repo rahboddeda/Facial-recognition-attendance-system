@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+#attendance-table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#attendance-table th, #attendance-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#attendance-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+#attendance-table tbody tr:nth-child(even) {
+  background-color: #86eaf3;
+}
+
+#attendance-table tbody tr:hover {
+  background-color: #95d9f4;
+}
+
+/* Additional Colors */
+#attendance-table tbody tr:nth-child(odd) {
+  background-color: #86eaf3; /* Light Orange */
+}
+
+#attendance-table th {
+  background-color: #4e19ee; /* Gold */
+  color: #fefefe;
+}
+
+#attendance-table tbody tr:hover {
+  background-color: #9ddef8; /* Light Purple */
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo for Attendance</title>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Upload Photo to Mark Attendance</h1>
+        <div id="image-preview"></div>
+        <button id="mark">Mark Attendance</button>
+    </div>
+    <script>
+        document.getElementById('mark').addEventListener('click', function() {
+            fetch('http://localhost:3000/execute-command', {
+    method: 'POST',
+    body: JSON.stringify({ command: 'python dbtest.py' }),
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => {
+    if (!response.ok) {
+        console.log(response)
+        throw new Error('Failed to execute command');
+    }
+    alert('Attendance marked successfully!');
+    return response.text();
+})
+.then(result => {
+    console.log(result);
+    alert('Attendance marked successfully!');
+})
+.catch(error => {
+    console.error('Error:', error);
+    window.location.href = 'teacher.html';
+});
+
+        });
+    </script>
+</body>
+</html>
